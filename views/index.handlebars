@@ -1,0 +1,20 @@
+<h1>Code Explainer</h1>
+
+<form action='/' method='post'>
+  <code>
+    <textarea
+      class='form-control mb-2'
+      placeholder='Enter your code here'
+      required
+      rows='20'
+      name='content'
+    ></textarea>
+  </code>
+  <button class='btn btn-primary' type='submit'>Check</button>
+</form>
+
+{{#if message}}
+  <hr />
+  <pre><code class='language-javascript'>{{code}}</code></pre>
+  <p class='callout callout-info'>{{message.content}}</p>
+{{/if}}
